@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ChevronRight, Buildings, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users } from 'lucide-react';
+import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -30,7 +30,7 @@ const Services = () => {
     {
       title: "Company Registration",
       description: "Register your business as a Private Limited Company, OPC, or Public Limited with our expert assistance.",
-      icon: <Buildings className="h-10 w-10" />,
+      icon: <Building className="h-10 w-10" />,
       url: "#"
     },
     {
