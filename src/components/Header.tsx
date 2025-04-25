@@ -35,7 +35,30 @@ const menuItems: MenuItem[] = [
           { name: 'Startup India Registration', href: '#' },
         ]
       },
-      { name: 'Licenses and Registration', href: '#' },
+      { 
+        name: 'Licenses and Registration', 
+        href: '#',
+        submenu: [
+          { name: 'Digital Signature Certificate', href: '#' },
+          { name: 'Udyam Registration', href: '#' },
+          { name: 'MSME Registration', href: '#' },
+          { name: 'ISO Certification', href: '#' },
+          { name: 'FSSAI [Food License]', href: '#' },
+          { name: 'IEC [Import/Export Code]', href: '#' },
+          { name: 'Apeda RCMC', href: '#' },
+          { name: 'Spice Board Registration', href: '#' },
+          { name: 'FIEO Registration', href: '#' },
+          { name: 'Legal Metrology', href: '#' },
+          { name: 'Hallmark Registration', href: '#' },
+          { name: 'BIS Registration', href: '#' },
+          { name: 'Liquor License', href: '#' },
+          { name: 'CLRA Registration & Licensing', href: '#' },
+          { name: 'AD Code Registration', href: '#' },
+          { name: 'IRDAI Registration', href: '#' },
+          { name: 'Drug & Cosmetic License', href: '#' },
+          { name: 'Customs Clearance', href: '#' },
+        ]
+      },
       { name: 'Web Development', href: '#' }
     ]
   },
