@@ -166,11 +166,11 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Email Us</h4>
-                  <a href="mailto:info@gempearlaccounting.com" className="text-gray-300 hover:text-white">
-                    info@gempearlaccounting.com
+                  <a href="mailto:sathishskca@gmail.com" className="text-gray-300 hover:text-white">
+                    sathishskca@gmail.com
                   </a><br />
-                  <a href="mailto:support@gempearlaccounting.com" className="text-gray-300 hover:text-white">
-                    support@gempearlaccounting.com
+                  <a href="mailto:sadanavgicai@gmail.com" className="text-gray-300 hover:text-white">
+                    sadanavgicai@gmail.com
                   </a>
                 </div>
               </div>
