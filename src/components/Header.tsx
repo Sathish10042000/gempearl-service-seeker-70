@@ -20,7 +20,20 @@ const menuItems: MenuItem[] = [
     name: 'Business Setup', 
     href: '#services',
     submenu: [
-      { name: 'Company Registration', href: '#' },
+      { 
+        name: 'Company Registration', 
+        href: '#',
+        submenu: [
+          { name: 'Private Limited Company', href: '#' },
+          { name: 'Limited Liability Partnership', href: '#' },
+          { name: 'One Person Company', href: '#' },
+          { name: 'Sole Proprietorship', href: '#' },
+          { name: 'Nidhi Company', href: '#' },
+          { name: 'Producer Company', href: '#' },
+          { name: 'Partnership Firm', href: '#' },
+          { name: 'Startup India Registration', href: '#' },
+        ]
+      },
       { name: 'Licenses and Registration', href: '#' },
       { name: 'Web Development', href: '#' }
     ]

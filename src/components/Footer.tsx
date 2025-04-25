@@ -33,16 +33,17 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Company Registration</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Licenses and Registration</a></li>
+              <li><span className="text-gempearl-teal font-medium">Company Registration:</span></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Private Limited Company</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Limited Liability Partnership</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">One Person Company</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Sole Proprietorship</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Nidhi Company</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Producer Company</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Partnership Firm</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Startup India Registration</a></li>
+              <li className="mt-2"><a href="#" className="text-gray-300 hover:text-gempearl-teal">Licenses and Registration</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Web Development</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">GST Registration</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Trademark Registration</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">VPOB Registration</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">APOB Registration</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Digital Signature Certificate</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Bookkeeping Services</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Tax Filing</a></li>
             </ul>
           </div>
           
