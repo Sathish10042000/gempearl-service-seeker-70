@@ -36,6 +36,9 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">LLP Registration</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">GST Registration</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Trademark Registration</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">VPOB Registration</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">APOB Registration</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Digital Signature Certificate</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Bookkeeping Services</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Tax Filing</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Payroll Management</a></li>

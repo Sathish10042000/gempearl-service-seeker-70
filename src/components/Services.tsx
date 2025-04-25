@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users } from 'lucide-react';
+import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users, FileSignature } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -49,6 +48,24 @@ const Services = () => {
       title: "Trademark Registration",
       description: "Protect your brand identity with trademark registration services from our experts.",
       icon: <PenTool className="h-10 w-10" />,
+      url: "#"
+    },
+    {
+      title: "VPOB Registration",
+      description: "Get Virtual Place of Business registration for your company with our comprehensive service.",
+      icon: <Building className="h-10 w-10" />,
+      url: "#"
+    },
+    {
+      title: "APOB Registration",
+      description: "Register for Additional Place of Business with our expert guidance and support.",
+      icon: <Building className="h-10 w-10" />,
+      url: "#"
+    },
+    {
+      title: "Digital Signature Certificate",
+      description: "Obtain your Digital Signature Certificate (DSC) for secure electronic document signing.",
+      icon: <FileSignature className="h-10 w-10" />,
       url: "#"
     }
   ];
