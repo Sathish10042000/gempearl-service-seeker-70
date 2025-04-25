@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -33,7 +34,8 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Company Registration</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">LLP Registration</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Licenses and Registration</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Web Development</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">GST Registration</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Trademark Registration</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">VPOB Registration</a></li>
@@ -41,7 +43,6 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Digital Signature Certificate</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Bookkeeping Services</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Tax Filing</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Payroll Management</a></li>
             </ul>
           </div>
           

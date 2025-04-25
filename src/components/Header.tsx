@@ -17,13 +17,12 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   { name: 'Home', href: '#' },
   { 
-    name: 'Business Services', 
+    name: 'Business Setup', 
     href: '#services',
     submenu: [
       { name: 'Company Registration', href: '#' },
-      { name: 'LLP Registration', href: '#' },
-      { name: 'GST Registration', href: '#' },
-      { name: 'Trademark Registration', href: '#' }
+      { name: 'Licenses and Registration', href: '#' },
+      { name: 'Web Development', href: '#' }
     ]
   },
   { 
