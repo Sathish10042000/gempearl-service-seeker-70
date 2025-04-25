@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -182,8 +181,8 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Call Us</h4>
-                  <a href="tel:+919876543210" className="text-gray-300 hover:text-white">
-                    +91 98765 43210
+                  <a href="tel:+918428308032" className="text-gray-300 hover:text-white">
+                    +91 84283 08032
                   </a><br />
                   <a href="tel:+919988776655" className="text-gray-300 hover:text-white">
                     +91 99887 76655
