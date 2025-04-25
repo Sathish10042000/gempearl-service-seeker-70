@@ -184,8 +184,8 @@ const ContactForm = () => {
                   <a href="tel:+918428308032" className="text-gray-300 hover:text-white">
                     +91 84283 08032
                   </a><br />
-                  <a href="tel:+919988776655" className="text-gray-300 hover:text-white">
-                    +91 99887 76655
+                  <a href="tel:+916380153021" className="text-gray-300 hover:text-white">
+                    +91 63801 53021
                   </a>
                 </div>
               </div>
