@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 interface SubMenuItem {
   name: string;
   href: string;
+  submenu?: SubMenuItem[];
 }
 
 interface MenuItem {
@@ -65,9 +66,16 @@ const menuItems: MenuItem[] = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [openNestedSubmenu, setOpenNestedSubmenu] = useState<string | null>(null);
 
   const toggleSubmenu = (name: string) => {
     setOpenSubmenu(openSubmenu === name ? null : name);
+    setOpenNestedSubmenu(null); // Close any nested submenu when toggling parent
+  };
+
+  const toggleNestedSubmenu = (name: string, e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent parent menu from toggling
+    setOpenNestedSubmenu(openNestedSubmenu === name ? null : name);
   };
 
   return (
@@ -104,13 +112,37 @@ const Header = () => {
                 <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-1">
                     {item.submenu.map((subItem) => (
-                      <a
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gempearl-navy"
-                      >
-                        {subItem.name}
-                      </a>
+                      <div key={subItem.name} className="relative group/nested">
+                        <a
+                          href={subItem.href}
+                          className="flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gempearl-navy"
+                          onClick={(e) => {
+                            if (subItem.submenu) {
+                              e.preventDefault();
+                              toggleNestedSubmenu(subItem.name, e);
+                            }
+                          }}
+                        >
+                          {subItem.name}
+                          {subItem.submenu && <ChevronDown className="ml-1 h-3 w-3" />}
+                        </a>
+                        
+                        {subItem.submenu && (
+                          <div className="absolute left-full top-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200 z-50">
+                            <div className="py-1">
+                              {subItem.submenu.map((nestedItem) => (
+                                <a
+                                  key={nestedItem.name}
+                                  href={nestedItem.href}
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gempearl-navy"
+                                >
+                                  {nestedItem.name}
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -169,13 +201,46 @@ const Header = () => {
                 {item.submenu && openSubmenu === item.name && (
                   <div className="mt-2 pl-4 border-l-2 border-gempearl-teal">
                     {item.submenu.map((subItem) => (
-                      <a
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block py-2 text-sm text-gray-700 hover:text-gempearl-teal"
-                      >
-                        {subItem.name}
-                      </a>
+                      <div key={subItem.name} className="py-2">
+                        <div 
+                          className="flex justify-between items-center"
+                          onClick={(e) => {
+                            if (subItem.submenu) {
+                              e.stopPropagation();
+                              setOpenNestedSubmenu(openNestedSubmenu === subItem.name ? null : subItem.name);
+                            }
+                          }}
+                        >
+                          <a
+                            href={subItem.href}
+                            className="block text-sm text-gray-700 hover:text-gempearl-teal"
+                            onClick={(e) => {
+                              if (subItem.submenu) {
+                                e.preventDefault();
+                              }
+                            }}
+                          >
+                            {subItem.name}
+                          </a>
+                          {subItem.submenu && (
+                            <ChevronDown className={`h-3 w-3 transition-transform ${openNestedSubmenu === subItem.name ? 'rotate-180' : ''}`} />
+                          )}
+                        </div>
+                        
+                        {subItem.submenu && openNestedSubmenu === subItem.name && (
+                          <div className="mt-2 pl-4 border-l-2 border-gempearl-teal">
+                            {subItem.submenu.map((nestedItem) => (
+                              <a
+                                key={nestedItem.name}
+                                href={nestedItem.href}
+                                className="block py-2 text-xs text-gray-700 hover:text-gempearl-teal"
+                              >
+                                {nestedItem.name}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
