@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -74,23 +73,16 @@ const menuItems: MenuItem[] = [
     ]
   },
   { 
-    name: 'Accounting Services', 
+    name: 'Tax & Compliance', 
     href: '#services',
     submenu: [
-      { name: 'Bookkeeping', href: '#' },
-      { name: 'Tax Filing', href: '#' },
-      { name: 'Payroll Management', href: '#' },
-      { name: 'Financial Reporting', href: '#' }
-    ]
-  },
-  { 
-    name: 'Tax & Compliance', 
-    href: '#',
-    submenu: [
-      { name: 'Income Tax Filing', href: '#' },
-      { name: 'GST Filing', href: '#' },
-      { name: 'TDS Returns', href: '#' },
-      { name: 'Annual Compliance', href: '#' }
+      { name: 'GST and Other Indirect Tax', href: '#' },
+      { name: 'Changes in Pvt Ltd Company', href: '#' },
+      { name: 'Changes In Limited Liability Partnership', href: '#' },
+      { name: 'Mandatory Annual Filings', href: '#' },
+      { name: 'Labour Compliance', href: '#' },
+      { name: 'Accounting & Tax', href: '#' },
+      { name: 'Convert Your Business', href: '#' }
     ]
   },
   { name: 'About Us', href: '#about' },

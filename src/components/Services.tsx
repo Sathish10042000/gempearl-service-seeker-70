@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users, FileSignature } from 'lucide-react';
+import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users, FileSignature, Shield, ShieldCheck } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -70,29 +71,47 @@ const Services = () => {
     }
   ];
 
-  const accountingServices = [
+  const taxComplianceServices = [
     {
-      title: "Bookkeeping",
-      description: "Maintain accurate financial records with our comprehensive bookkeeping services.",
+      title: "GST and Other Indirect Tax",
+      description: "Navigate complex GST regulations and other indirect tax requirements with our expert services.",
+      icon: <FileCheck className="h-10 w-10" />,
+      url: "#"
+    },
+    {
+      title: "Changes in Pvt Ltd Company",
+      description: "Efficiently manage structural changes, compliance updates, and regulatory requirements for your private limited company.",
+      icon: <Building className="h-10 w-10" />,
+      url: "#"
+    },
+    {
+      title: "Changes In Limited Liability Partnership",
+      description: "Implement and document changes to your LLP structure with our professional support services.",
+      icon: <Users className="h-10 w-10" />,
+      url: "#"
+    },
+    {
+      title: "Mandatory Annual Filings",
+      description: "Stay compliant with all statutory filings and annual requirements for your business entity.",
       icon: <FileText className="h-10 w-10" />,
       url: "#"
     },
     {
-      title: "Tax Filing",
-      description: "Stay compliant with tax regulations with our expert tax filing services for businesses.",
+      title: "Labour Compliance",
+      description: "Ensure adherence to all labor laws, regulations and compliance requirements for your business.",
+      icon: <Shield className="h-10 w-10" />,
+      url: "#"
+    },
+    {
+      title: "Accounting & Tax",
+      description: "Comprehensive accounting services and tax management solutions tailored to your business needs.",
       icon: <Landmark className="h-10 w-10" />,
       url: "#"
     },
     {
-      title: "Payroll Management",
-      description: "Streamline your payroll process with our efficient and accurate payroll management services.",
-      icon: <CreditCard className="h-10 w-10" />,
-      url: "#"
-    },
-    {
-      title: "Financial Reporting",
-      description: "Get insightful financial reports to make informed business decisions and track performance.",
-      icon: <BarChart className="h-10 w-10" />,
+      title: "Convert Your Business",
+      description: "Transform your business structure from one entity type to another with our seamless conversion services.",
+      icon: <ShieldCheck className="h-10 w-10" />,
       url: "#"
     }
   ];
@@ -103,7 +122,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gempearl-navy">Our Services</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive business and accounting solutions tailored to meet the unique needs of your business
+            Comprehensive business and compliance solutions tailored to meet the unique needs of your business
           </p>
         </div>
 
@@ -126,10 +145,10 @@ const Services = () => {
 
         <div>
           <h3 className="text-2xl font-semibold mb-8 text-gempearl-navy border-b border-gray-200 pb-2">
-            Accounting & Financial Services
+            Tax & Compliance Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {accountingServices.map((service, index) => (
+            {taxComplianceServices.map((service, index) => (
               <ServiceCard 
                 key={index}
                 title={service.title}
