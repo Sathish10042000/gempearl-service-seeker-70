@@ -12,7 +12,7 @@ const Footer = () => {
               <span className="text-gempearl-teal">Gem</span>Pearl
             </h3>
             <p className="text-gray-300 mb-6">
-              Your trusted partner for comprehensive accounting and business services. We help businesses navigate financial complexities with ease.
+              Your trusted partner for comprehensive accounting, business registration, and web development services. We help businesses navigate complexities with ease.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-white/10 hover:bg-gempearl-teal text-white p-2 rounded-full transition-colors duration-200">
@@ -43,7 +43,9 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Partnership Firm</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Startup India Registration</a></li>
               <li className="mt-2"><a href="#" className="text-gray-300 hover:text-gempearl-teal">Licenses and Registration</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Web Development</a></li>
+              <li><span className="text-gempearl-teal font-medium">Web Development:</span></li>
+              <li><a href="#web-development" className="text-gray-300 hover:text-gempearl-teal pl-3">Business Websites</a></li>
+              <li><a href="#web-development" className="text-gray-300 hover:text-gempearl-teal pl-3">E-commerce Solutions</a></li>
             </ul>
           </div>
           
@@ -53,6 +55,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Home</a></li>
               <li><a href="#about" className="text-gray-300 hover:text-gempearl-teal">About Us</a></li>
               <li><a href="#services" className="text-gray-300 hover:text-gempearl-teal">Services</a></li>
+              <li><a href="#web-development" className="text-gray-300 hover:text-gempearl-teal">Web Development</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Blog</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">FAQ</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Privacy Policy</a></li>

@@ -59,7 +59,7 @@ const menuItems: MenuItem[] = [
           { name: 'Customs Clearance', href: '#' },
         ]
       },
-      { name: 'Web Development', href: '#' }
+      { name: 'Web Development', href: '#web-development' }
     ]
   },
   { 
@@ -82,6 +82,7 @@ const menuItems: MenuItem[] = [
       { name: 'Annual Compliance', href: '#' }
     ]
   },
+  { name: 'Web Development', href: '#web-development' },
   { name: 'About Us', href: '#about' },
   { name: 'Contact', href: '#contact' }
 ];

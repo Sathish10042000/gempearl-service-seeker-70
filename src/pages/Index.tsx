@@ -7,6 +7,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import WebDevelopment from '@/components/WebDevelopment';
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <Services />
+        <WebDevelopment />
         <WhyChooseUs />
         <Testimonials />
         <ContactForm />
