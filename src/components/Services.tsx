@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users, FileSignature, Shield, ShieldCheck, Trademark, Copyright, Patent, FileWarning } from 'lucide-react';
+import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users, FileSignature, Shield, ShieldCheck, Copyright, FileWarning, Award, BadgeCheck } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -120,7 +119,7 @@ const Services = () => {
     {
       title: "Trademark",
       description: "Protect your brand name, logo, and identity with our comprehensive trademark registration services.",
-      icon: <Trademark className="h-10 w-10" />,
+      icon: <Award className="h-10 w-10" />,
       url: "#trademark"
     },
     {
@@ -132,7 +131,7 @@ const Services = () => {
     {
       title: "Patent",
       description: "Secure your inventions and innovations with our expert patent filing and prosecution services.",
-      icon: <Patent className="h-10 w-10" />,
+      icon: <BadgeCheck className="h-10 w-10" />,
       url: "#trademark"
     },
     {
