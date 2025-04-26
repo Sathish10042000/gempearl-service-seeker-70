@@ -59,7 +59,18 @@ const menuItems: MenuItem[] = [
           { name: 'Customs Clearance', href: '#' },
         ]
       },
-      { name: 'Web Development', href: '#web-development' }
+      { 
+        name: 'Web Development', 
+        href: '#web-development',
+        submenu: [
+          { name: 'Business Website Development', href: '#web-development' },
+          { name: 'E-commerce Solutions', href: '#web-development' },
+          { name: 'Custom Web Applications', href: '#web-development' },
+          { name: 'UI/UX Design', href: '#web-development' },
+          { name: 'Payment Gateway Integration', href: '#web-development' },
+          { name: 'Web Hosting & Maintenance', href: '#web-development' },
+        ]
+      }
     ]
   },
   { 
@@ -82,7 +93,6 @@ const menuItems: MenuItem[] = [
       { name: 'Annual Compliance', href: '#' }
     ]
   },
-  { name: 'Web Development', href: '#web-development' },
   { name: 'About Us', href: '#about' },
   { name: 'Contact', href: '#contact' }
 ];
