@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import EMICalculator from './EMICalculator';
 
 const Footer = () => {
   return (
@@ -46,6 +46,9 @@ const Footer = () => {
               <li><span className="text-gempearl-teal font-medium">Web Development:</span></li>
               <li><a href="#web-development" className="text-gray-300 hover:text-gempearl-teal pl-3">Business Websites</a></li>
               <li><a href="#web-development" className="text-gray-300 hover:text-gempearl-teal pl-3">E-commerce Solutions</a></li>
+              <li className="mt-2">
+                <EMICalculator />
+              </li>
             </ul>
           </div>
           
