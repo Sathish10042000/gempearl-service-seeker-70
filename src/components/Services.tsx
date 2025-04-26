@@ -148,6 +148,45 @@ const Services = () => {
     }
   ];
 
+  const documentationServices = [
+    {
+      title: "Free Legal Documents",
+      description: "Access a wide range of free legal document templates tailored for various needs and circumstances.",
+      icon: <FileText className="h-10 w-10" />,
+      url: "#documentation"
+    },
+    {
+      title: "Business Contracts",
+      description: "Comprehensive contract templates for business operations, partnerships, employment, and client relationships.",
+      icon: <FileSignature className="h-10 w-10" />,
+      url: "#documentation"
+    },
+    {
+      title: "Personal & Family",
+      description: "Essential legal documents for personal and family matters including wills, power of attorney, and family agreements.",
+      icon: <Users className="h-10 w-10" />,
+      url: "#documentation"
+    },
+    {
+      title: "Real Estate",
+      description: "Complete documentation for real estate transactions, leases, rental agreements, and property management.",
+      icon: <Building className="h-10 w-10" />,
+      url: "#documentation"
+    },
+    {
+      title: "Notices",
+      description: "Professional legal notices for various situations including property, business, and personal matters.",
+      icon: <FileText className="h-10 w-10" />,
+      url: "#documentation"
+    },
+    {
+      title: "HR Policies",
+      description: "Comprehensive human resources policy templates for businesses of all sizes to establish clear workplace guidelines.",
+      icon: <Shield className="h-10 w-10" />,
+      url: "#documentation"
+    }
+  ];
+
   return (
     <section id="services" className="py-16 md:py-20 bg-gray-50">
       <div className="container-custom">
@@ -198,6 +237,23 @@ const Services = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {trademarkIPServices.map((service, index) => (
+              <ServiceCard 
+                key={index}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                url={service.url}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div id="documentation" className="mb-16">
+          <h3 className="text-2xl font-semibold mb-8 text-gempearl-navy border-b border-gray-200 pb-2">
+            Documentation Services
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {documentationServices.map((service, index) => (
               <ServiceCard 
                 key={index}
                 title={service.title}

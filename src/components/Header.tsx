@@ -97,6 +97,18 @@ const menuItems: MenuItem[] = [
       { name: 'Design Registration', href: '#trademark' }
     ]
   },
+  { 
+    name: 'Documentation', 
+    href: '#documentation',
+    submenu: [
+      { name: 'Free Legal Documents', href: '#documentation' },
+      { name: 'Business Contracts', href: '#documentation' },
+      { name: 'Personal & Family', href: '#documentation' },
+      { name: 'Real Estate', href: '#documentation' },
+      { name: 'Notices', href: '#documentation' },
+      { name: 'HR Policies', href: '#documentation' }
+    ]
+  },
   { name: 'About Us', href: '#about' },
   { name: 'Contact', href: '#contact' }
 ];
