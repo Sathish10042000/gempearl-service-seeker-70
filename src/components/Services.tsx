@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users, FileSignature, Shield, ShieldCheck } from 'lucide-react';
+import { ChevronRight, Building, FileText, PenTool, BarChart, FileCheck, CreditCard, Landmark, Users, FileSignature, Shield, ShieldCheck, Trademark, Copyright, Patent, FileWarning } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -116,6 +116,39 @@ const Services = () => {
     }
   ];
 
+  const trademarkIPServices = [
+    {
+      title: "Trademark",
+      description: "Protect your brand name, logo, and identity with our comprehensive trademark registration services.",
+      icon: <Trademark className="h-10 w-10" />,
+      url: "#trademark"
+    },
+    {
+      title: "Copyright",
+      description: "Safeguard your creative works, content, and intellectual property with our copyright registration services.",
+      icon: <Copyright className="h-10 w-10" />,
+      url: "#trademark"
+    },
+    {
+      title: "Patent",
+      description: "Secure your inventions and innovations with our expert patent filing and prosecution services.",
+      icon: <Patent className="h-10 w-10" />,
+      url: "#trademark"
+    },
+    {
+      title: "Infringement",
+      description: "Protect your intellectual property rights with our infringement analysis and enforcement services.",
+      icon: <FileWarning className="h-10 w-10" />,
+      url: "#trademark"
+    },
+    {
+      title: "Design Registration",
+      description: "Register and protect the unique visual appearance of your products with our design registration services.",
+      icon: <PenTool className="h-10 w-10" />,
+      url: "#trademark"
+    }
+  ];
+
   return (
     <section id="services" className="py-16 md:py-20 bg-gray-50">
       <div className="container-custom">
@@ -143,12 +176,29 @@ const Services = () => {
           </div>
         </div>
 
-        <div>
+        <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-gempearl-navy border-b border-gray-200 pb-2">
             Tax & Compliance Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {taxComplianceServices.map((service, index) => (
+              <ServiceCard 
+                key={index}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                url={service.url}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div id="trademark" className="mb-16">
+          <h3 className="text-2xl font-semibold mb-8 text-gempearl-navy border-b border-gray-200 pb-2">
+            Trademark & IP Services
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trademarkIPServices.map((service, index) => (
               <ServiceCard 
                 key={index}
                 title={service.title}

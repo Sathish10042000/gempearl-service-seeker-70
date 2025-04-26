@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -83,6 +84,17 @@ const menuItems: MenuItem[] = [
       { name: 'Labour Compliance', href: '#' },
       { name: 'Accounting & Tax', href: '#' },
       { name: 'Convert Your Business', href: '#' }
+    ]
+  },
+  { 
+    name: 'Trademark & IP', 
+    href: '#trademark',
+    submenu: [
+      { name: 'Trademark', href: '#trademark' },
+      { name: 'Copyright', href: '#trademark' },
+      { name: 'Patent', href: '#trademark' },
+      { name: 'Infringement', href: '#trademark' },
+      { name: 'Design Registration', href: '#trademark' }
     ]
   },
   { name: 'About Us', href: '#about' },
