@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold mb-4">Our Services</h3>
+            <h3 className="text-xl font-semibold mb-4">Financial Tools & Calculators</h3>
             <ul className="space-y-2">
               <li><span className="text-gempearl-teal font-medium">Company Registration:</span></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Private Limited Company</a></li>
