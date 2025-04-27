@@ -153,9 +153,9 @@ const ContactForm = () => {
                 <div>
                   <h4 className="font-medium mb-1">Our Office</h4>
                   <p className="text-gray-300">
-                    123 Business Avenue, Corporate Park<br />
-                    Mumbai, Maharashtra 400001<br />
-                    India
+                    A-16, Promise Nagar, FC Godown Backside<br />
+                    Therukupalayam Pirivu, Palladam Road<br />
+                    Tirupur - 641 664, Tamil Nadu, India
                   </p>
                 </div>
               </div>

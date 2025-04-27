@@ -72,8 +72,9 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-gempearl-teal mr-3 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-300">
-                  123 Business Avenue, Corporate Park<br />
-                  Mumbai, Maharashtra 400001
+                  A-16, Promise Nagar, FC Godown Backside<br />
+                  Therukupalayam Pirivu, Palladam Road<br />
+                  Tirupur - 641 664, Tamil Nadu, India
                 </span>
               </li>
               <li className="flex items-center">
