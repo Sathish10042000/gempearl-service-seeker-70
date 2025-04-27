@@ -8,6 +8,7 @@ import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import WebDevelopment from '@/components/WebDevelopment';
+import ReferEarn from '@/components/ReferEarn';
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <Services />
         <WebDevelopment />
         <WhyChooseUs />
+        <ReferEarn />
         <Testimonials />
         <ContactForm />
       </main>
