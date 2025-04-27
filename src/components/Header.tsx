@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LoginModal, SignupModal } from './auth/AuthModals';
 
 interface SubMenuItem {
   name: string;
@@ -120,11 +120,11 @@ const Header = () => {
 
   const toggleSubmenu = (name: string) => {
     setOpenSubmenu(openSubmenu === name ? null : name);
-    setOpenNestedSubmenu(null); // Close any nested submenu when toggling parent
+    setOpenNestedSubmenu(null);
   };
 
   const toggleNestedSubmenu = (name: string, e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent parent menu from toggling
+    e.stopPropagation();
     setOpenNestedSubmenu(openNestedSubmenu === name ? null : name);
   };
 
@@ -140,7 +140,6 @@ const Header = () => {
           </a>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-6">
           {menuItems.map((item) => (
             <div key={item.name} className="relative group">
@@ -202,12 +201,15 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:block">
-          <Button className="bg-gempearl-teal hover:bg-gempearl-navy text-white">
-            Get a Quote
-          </Button>
+          <div className="flex items-center space-x-4">
+            <LoginModal />
+            <SignupModal />
+            <Button className="bg-gempearl-teal hover:bg-gempearl-navy text-white">
+              Get a Quote
+            </Button>
+          </div>
         </div>
 
-        {/* Mobile menu button */}
         <div className="lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -218,7 +220,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isOpen && (
         <div className="lg:hidden bg-white shadow-md">
           <nav className="container-custom py-4">
@@ -296,7 +297,9 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <div className="mt-4">
+            <div className="mt-4 space-y-2">
+              <LoginModal />
+              <SignupModal />
               <Button className="w-full bg-gempearl-teal hover:bg-gempearl-navy text-white">
                 Get a Quote
               </Button>
