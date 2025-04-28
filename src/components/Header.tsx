@@ -200,8 +200,6 @@ const Header = () => {
 
         <div className="hidden lg:block">
           <div className="flex items-center space-x-4">
-            <LoginModal />
-            <SignupModal />
             <Button className="bg-gempearl-teal hover:bg-gempearl-navy text-white">
               Get a Quote
             </Button>
@@ -296,8 +294,6 @@ const Header = () => {
               </div>
             ))}
             <div className="mt-4 space-y-2">
-              <LoginModal />
-              <SignupModal />
               <Button className="w-full bg-gempearl-teal hover:bg-gempearl-navy text-white">
                 Get a Quote
               </Button>
