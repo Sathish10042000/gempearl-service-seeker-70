@@ -9,6 +9,7 @@ import Testimonials from '@/components/Testimonials';
 import WebDevelopment from '@/components/WebDevelopment';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import ReferEarn from '@/components/ReferEarn';
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <Services />
       <WhyChooseUs />
       <WebDevelopment />
+      <ReferEarn />
       <Testimonials />
       <ContactForm />
       <Footer />
