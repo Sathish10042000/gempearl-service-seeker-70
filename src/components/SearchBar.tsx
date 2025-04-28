@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
@@ -136,12 +137,14 @@ const SearchBar = () => {
   const [searchValue, setSearchValue] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
-  const filteredServices = services.filter(service =>
-    service.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-    service.keywords.some(keyword => 
-      keyword.toLowerCase().includes(searchValue.toLowerCase())
-    )
-  );
+  const filteredServices = services.filter(service => {
+    const searchLower = searchValue.toLowerCase();
+    return (
+      service.name.toLowerCase().includes(searchLower) ||
+      service.keywords.some(keyword => keyword.toLowerCase().includes(searchLower)) ||
+      Array.from(service.name.toLowerCase()).some(char => searchLower.includes(char))
+    );
+  });
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -108,8 +108,7 @@ const menuItems: MenuItem[] = [
       { name: 'Notices', href: '#documentation' },
       { name: 'HR Policies', href: '#documentation' }
     ]
-  },
-  { name: 'Earn With Us', href: '/earn-with-us' }
+  }
 ];
 
 const Header = () => {
