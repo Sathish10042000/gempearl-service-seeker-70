@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -109,6 +110,7 @@ const menuItems: MenuItem[] = [
       { name: 'HR Policies', href: '#documentation' }
     ]
   },
+  { name: 'Earn With Us', href: '/earn-with-us' },
   { name: 'About Us', href: '#about' },
   { name: 'Contact', href: '#contact' }
 ];

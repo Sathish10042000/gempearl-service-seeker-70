@@ -1,6 +1,6 @@
+
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import FinancialCalculators from './calculators/FinancialCalculators';
 
 const Footer = () => {
   return (
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-gempearl-gold">Financial Tools & Calculators</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gempearl-gold">Our Services</h3>
             <ul className="space-y-2">
               <li><span className="text-gempearl-teal font-medium">Company Registration:</span></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal pl-3">Private Limited Company</a></li>
@@ -47,7 +47,7 @@ const Footer = () => {
               <li><a href="#web-development" className="text-gray-300 hover:text-gempearl-teal pl-3">Business Websites</a></li>
               <li><a href="#web-development" className="text-gray-300 hover:text-gempearl-teal pl-3">E-commerce Solutions</a></li>
               <li className="mt-2">
-                <FinancialCalculators />
+                <a href="/earn-with-us" className="text-gray-300 hover:text-gempearl-teal font-medium">Earn With Us</a>
               </li>
             </ul>
           </div>
@@ -59,6 +59,7 @@ const Footer = () => {
               <li><a href="#about" className="text-gray-300 hover:text-gempearl-teal">About Us</a></li>
               <li><a href="#services" className="text-gray-300 hover:text-gempearl-teal">Services</a></li>
               <li><a href="#web-development" className="text-gray-300 hover:text-gempearl-teal">Web Development</a></li>
+              <li><a href="/earn-with-us" className="text-gray-300 hover:text-gempearl-teal">Earn With Us</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Blog</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">FAQ</a></li>
               <li><a href="#" className="text-gray-300 hover:text-gempearl-teal">Privacy Policy</a></li>
