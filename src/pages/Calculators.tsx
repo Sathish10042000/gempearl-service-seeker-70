@@ -43,7 +43,7 @@ const Calculators = () => {
                 <FinancialCalculators />
               </TabsContent>
               
-              <TabsContent value="tax" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <TabsContent value="tax" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-blue-50 p-4 rounded-md">
                 <EMICalculator />
               </TabsContent>
               

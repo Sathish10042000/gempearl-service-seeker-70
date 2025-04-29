@@ -26,7 +26,7 @@ const EMICalculator = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="w-full text-left justify-start">
+        <Button variant="outline" className="w-full text-left justify-start bg-blue-100 hover:bg-blue-200 border-blue-300 text-black">
           <IndianRupee className="mr-2 h-4 w-4" /> EMI Calculator
         </Button>
       </DialogTrigger>
@@ -89,4 +89,3 @@ const EMICalculator = () => {
 };
 
 export default EMICalculator;
-
