@@ -108,6 +108,17 @@ const menuItems: MenuItem[] = [
       { name: 'Notices', href: '#documentation' },
       { name: 'HR Policies', href: '#documentation' }
     ]
+  },
+  { 
+    name: 'Others', 
+    href: '#others',
+    submenu: [
+      { name: 'Calculators', href: '/calculators' },
+      { name: 'Blog', href: '#blog' },
+      { name: 'Knowledge Base', href: '#knowledge-base' },
+      { name: 'FAQ', href: '#faq' },
+      { name: 'Contact Us', href: '#contact' }
+    ]
   }
 ];
 
