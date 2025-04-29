@@ -10,6 +10,7 @@ import {
 import FinancialCalculators from '@/components/calculators/FinancialCalculators';
 import EMICalculator from '@/components/EMICalculator';
 import AdvancedCalculators from '@/components/calculators/AdvancedCalculators';
+import BasicCalculator from '@/components/calculators/BasicCalculator';
 
 const Calculators = () => {
   return (
@@ -23,8 +24,12 @@ const Calculators = () => {
           </h1>
           
           <div className="mt-10">
-            <Tabs defaultValue="financial" className="w-full">
-              <TabsList className="grid grid-cols-3 mb-8 bg-blue-800/50 p-1">
+            <Tabs defaultValue="basic" className="w-full">
+              <TabsList className="grid grid-cols-4 mb-8 bg-blue-800/50 p-1">
+                <TabsTrigger value="basic" className="data-[state=active]:bg-blue-700">
+                  <Calculator className="mr-2 h-4 w-4" />
+                  Basic
+                </TabsTrigger>
                 <TabsTrigger value="financial" className="data-[state=active]:bg-blue-700">
                   <CircleDollarSign className="mr-2 h-4 w-4" />
                   Financial
@@ -39,7 +44,13 @@ const Calculators = () => {
                 </TabsTrigger>
               </TabsList>
               
-              <TabsContent value="financial" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <TabsContent value="basic" className="bg-blue-50 p-4 rounded-md">
+                <div className="max-w-md mx-auto">
+                  <BasicCalculator />
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="financial" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-blue-50 p-4 rounded-md">
                 <FinancialCalculators />
               </TabsContent>
               
@@ -47,7 +58,7 @@ const Calculators = () => {
                 <EMICalculator />
               </TabsContent>
               
-              <TabsContent value="investment" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <TabsContent value="investment" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-blue-50 p-4 rounded-md">
                 <AdvancedCalculators />
               </TabsContent>
             </Tabs>
