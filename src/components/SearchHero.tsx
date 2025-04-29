@@ -1,8 +1,9 @@
-
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useToast } from '@/hooks/use-toast';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,82 +14,145 @@ import {
 interface ServiceItem {
   name: string;
   keywords: string[];
+  href: string;
+  category: string;
 }
 
+// Comprehensive list of all services - keeping the most relevant ones for the hero section
 const services: ServiceItem[] = [
   {
     name: "GST Registration",
-    keywords: ["gst", "tax", "registration"]
+    keywords: ["gst", "tax", "registration"],
+    href: "#services",
+    category: "Business Formation"
   },
   {
-    name: "GST Return Filing",
-    keywords: ["gst", "tax", "return", "filing"]
+    name: "Company Registration",
+    keywords: ["company", "registration", "business", "formation"],
+    href: "#services",
+    category: "Business Formation"
   },
   {
     name: "Private Limited Company",
-    keywords: ["company", "registration", "private limited", "business"]
+    keywords: ["company", "registration", "private limited", "business"],
+    href: "#services",
+    category: "Business Formation"
   },
   {
     name: "Limited Liability Partnership",
-    keywords: ["llp", "partnership", "business", "registration"]
-  },
-  {
-    name: "One Person Company",
-    keywords: ["opc", "company", "registration", "business"]
+    keywords: ["llp", "partnership", "business", "registration"],
+    href: "#services",
+    category: "Business Formation"
   },
   {
     name: "Trademark Registration",
-    keywords: ["trademark", "registration", "intellectual property"]
+    keywords: ["trademark", "registration", "intellectual property"],
+    href: "#trademark",
+    category: "Trademark & IP"
   },
   {
     name: "Copyright Registration",
-    keywords: ["copyright", "registration", "intellectual property"]
+    keywords: ["copyright", "registration", "intellectual property"],
+    href: "#trademark",
+    category: "Trademark & IP"
   },
   {
     name: "Patent Registration",
-    keywords: ["patent", "registration", "intellectual property", "innovation"]
+    keywords: ["patent", "registration", "intellectual property", "innovation"],
+    href: "#trademark",
+    category: "Trademark & IP"
   },
   {
     name: "Import Export Code",
-    keywords: ["iec", "import", "export", "code"]
+    keywords: ["iec", "import", "export", "code"],
+    href: "#services",
+    category: "Business Formation"
   },
   {
     name: "Accounting & Bookkeeping",
-    keywords: ["accounting", "bookkeeping", "finance", "business"]
+    keywords: ["accounting", "bookkeeping", "finance", "business"],
+    href: "#services",
+    category: "Tax & Compliance"
   },
   {
-    name: "Business Incorporation",
-    keywords: ["incorporation", "business", "company", "setup"]
+    name: "E-commerce Website Development",
+    keywords: ["ecommerce", "website", "development", "online store"],
+    href: "#web-development",
+    category: "Web Development"
+  },
+  {
+    name: "Business Website Development",
+    keywords: ["website", "development", "business", "web"],
+    href: "#web-development",
+    category: "Web Development"
   },
   {
     name: "Tax Filing",
-    keywords: ["tax", "filing", "returns", "income"]
+    keywords: ["tax", "filing", "returns", "income"],
+    href: "#services",
+    category: "Tax & Compliance"
   },
 ];
 
 const categories = [
-  { name: "GST Registration", href: "#" },
-  { name: "Company Registration", href: "#" },
-  { name: "Accounting & Business Compliance", href: "#" },
+  { name: "GST Registration", href: "#services" },
+  { name: "Company Registration", href: "#services" },
+  { name: "Accounting & Business Compliance", href: "#services" },
   { name: "Trademark", href: "#trademark" },
 ];
 
 const SearchHero = () => {
   const [searchValue, setSearchValue] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const { toast } = useToast();
 
   const filteredServices = services.filter(service => {
+    if (!searchValue.trim()) return false;
+    
     const searchLower = searchValue.toLowerCase();
     return (
       service.name.toLowerCase().includes(searchLower) ||
-      service.keywords.some(keyword => keyword.toLowerCase().includes(searchLower))
+      service.keywords.some(keyword => keyword.toLowerCase().includes(searchLower)) ||
+      service.category.toLowerCase().includes(searchLower)
     );
   });
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Searching for:', searchValue);
-    // Search functionality can be implemented here
+    
+    if (filteredServices.length > 0) {
+      // Navigate to the first result
+      const firstResult = filteredServices[0];
+      handleSelectService(firstResult);
+    } else {
+      toast({
+        title: "No results found",
+        description: `No services matching "${searchValue}" were found.`,
+      });
+    }
+  };
+
+  const handleSelectService = (service: ServiceItem) => {
+    setSearchValue(service.name);
+    setIsOpen(false);
+    
+    // Handle navigation based on href
+    if (service.href.startsWith('#')) {
+      // For hash links on the current page
+      const element = document.querySelector(service.href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // For other pages
+      navigate(service.href);
+    }
+    
+    toast({
+      title: "Service selected",
+      description: `You selected: ${service.name}`,
+    });
   };
 
   return (
@@ -128,6 +192,7 @@ const SearchHero = () => {
                   setSearchValue(e.target.value);
                   setIsOpen(e.target.value.length > 0);
                 }}
+                autoComplete="off"
               />
               <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
                 <Search className="text-gray-500 h-6 w-6" />
@@ -136,25 +201,25 @@ const SearchHero = () => {
                 <DropdownMenuTrigger className="hidden" />
                 <DropdownMenuContent
                   align="start"
-                  className="w-[calc(100%-2rem)] max-w-3xl mt-2 max-h-[60vh] overflow-y-auto"
+                  className="w-[calc(100%-2rem)] max-w-3xl mt-2 max-h-[60vh] overflow-y-auto bg-white"
                   style={{ width: 'calc(100% - 1rem)' }}
                 >
-                  {filteredServices.map((service) => (
-                    <DropdownMenuItem
-                      key={service.name}
-                      className="py-2"
-                      onSelect={() => {
-                        setSearchValue(service.name);
-                        setIsOpen(false);
-                      }}
-                    >
-                      {service.name}
-                    </DropdownMenuItem>
-                  ))}
-                  {filteredServices.length === 0 && (
-                    <DropdownMenuItem disabled className="py-2">
-                      No services found
-                    </DropdownMenuItem>
+                  {filteredServices.length > 0 ? (
+                    filteredServices.map((service) => (
+                      <DropdownMenuItem
+                        key={service.name}
+                        className="py-2"
+                        onSelect={() => handleSelectService(service)}
+                      >
+                        {service.name}
+                      </DropdownMenuItem>
+                    ))
+                  ) : (
+                    searchValue.length > 0 && (
+                      <DropdownMenuItem disabled className="py-2">
+                        No services found
+                      </DropdownMenuItem>
+                    )
                   )}
                 </DropdownMenuContent>
               </DropdownMenu>
