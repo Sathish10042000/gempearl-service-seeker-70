@@ -24,9 +24,9 @@ interface CalculatorConfig {
     max?: number;
     step?: number;
     useSlider?: boolean;
-    options?: Array<{value: string; label: string}>; // Added options property
+    options?: Array<{value: string; label: string}>;
   }[];
-  calculate: (values: { [key: string]: string | number | boolean }) => number | { [key: string]: number }; // Updated to include boolean
+  calculate: (values: { [key: string]: string | number | boolean }) => number | { [key: string]: number };
   formatResult?: (result: number | { [key: string]: number }) => React.ReactNode;
 }
 
@@ -354,7 +354,7 @@ const CalculatorDialog = ({ type }: { type: string }) => {
                       <Input
                         id={field.id}
                         type="number"
-                        value={values[field.id] || ''}
+                        value={values[field.id] as string || ''}
                         onChange={(e) => setValues((prev) => ({ ...prev, [field.id]: e.target.value }))}
                         className="w-20"
                         placeholder={field.placeholder}
