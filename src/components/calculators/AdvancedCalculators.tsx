@@ -324,7 +324,7 @@ const CalculatorDialog = ({ type }: { type: string }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="w-full text-left justify-start">
+        <Button variant="outline" className="w-full text-left justify-start bg-blue-50 hover:bg-blue-100 border-blue-200">
           <Calculator className="mr-2 h-4 w-4" />
           {config.title}
         </Button>
@@ -378,7 +378,7 @@ const CalculatorDialog = ({ type }: { type: string }) => {
                     id={field.id}
                     value={values[field.id] as string || ''}
                     onChange={(e) => setValues((prev) => ({ ...prev, [field.id]: e.target.value }))}
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base"
+                    className="flex h-10 w-full rounded-md border border-input bg-blue-50 px-3 py-2 text-base"
                   >
                     <option value="" disabled>Select option</option>
                     {field.options.map((option) => (
@@ -391,7 +391,7 @@ const CalculatorDialog = ({ type }: { type: string }) => {
                     type={field.type}
                     value={values[field.id] as string || ''}
                     onChange={(e) => setValues((prev) => ({ ...prev, [field.id]: e.target.value }))}
-                    className="col-span-3"
+                    className="col-span-3 bg-blue-50"
                     placeholder={field.placeholder}
                   />
                 )}

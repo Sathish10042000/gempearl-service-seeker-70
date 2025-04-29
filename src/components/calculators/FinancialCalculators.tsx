@@ -176,7 +176,7 @@ const CalculatorDialog = ({ type }: { type: string }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="w-full text-left justify-start">
+        <Button variant="outline" className="w-full text-left justify-start bg-blue-50 hover:bg-blue-100 border-blue-200">
           <Calculator className="mr-2 h-4 w-4" />
           {config.title}
         </Button>
