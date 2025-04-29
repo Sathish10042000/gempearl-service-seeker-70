@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
   Calculator, CircleDollarSign, CirclePercent, Percent, 
-  Plus, Minus, Divide, Equal
+  Plus, Minus, Divide, Equal, MoreHorizontal
 } from 'lucide-react';
 import FinancialCalculators from '@/components/calculators/FinancialCalculators';
 import EMICalculator from '@/components/EMICalculator';
@@ -25,7 +25,7 @@ const Calculators = () => {
           
           <div className="mt-10">
             <Tabs defaultValue="basic" className="w-full">
-              <TabsList className="grid grid-cols-4 mb-8 bg-blue-800/50 p-1">
+              <TabsList className="grid grid-cols-5 mb-8 bg-blue-800/50 p-1">
                 <TabsTrigger value="basic" className="data-[state=active]:bg-blue-700">
                   <Calculator className="mr-2 h-4 w-4" />
                   Basic
@@ -41,6 +41,10 @@ const Calculators = () => {
                 <TabsTrigger value="investment" className="data-[state=active]:bg-blue-700">
                   <Calculator className="mr-2 h-4 w-4" />
                   Investment
+                </TabsTrigger>
+                <TabsTrigger value="others" className="data-[state=active]:bg-blue-700">
+                  <MoreHorizontal className="mr-2 h-4 w-4" />
+                  Others
                 </TabsTrigger>
               </TabsList>
               
@@ -60,6 +64,28 @@ const Calculators = () => {
               
               <TabsContent value="investment" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-blue-50 p-4 rounded-md">
                 <AdvancedCalculators />
+              </TabsContent>
+              
+              <TabsContent value="others" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-blue-50 p-4 rounded-md">
+                <div className="col-span-full flex flex-col items-center justify-center p-8 text-center">
+                  <MoreHorizontal className="h-12 w-12 mb-4 text-blue-500" />
+                  <h3 className="text-xl font-medium mb-2">Additional Calculators</h3>
+                  <p className="text-gray-600 mb-6">This section will soon include more specialized calculators like age calculator, date difference, and unit converters.</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-3xl">
+                    <div className="bg-white p-4 rounded-lg shadow border border-blue-100 hover:bg-blue-50 transition-colors duration-200">
+                      <h4 className="font-medium text-blue-700">Age Calculator</h4>
+                      <p className="text-sm text-gray-500">Coming soon</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow border border-blue-100 hover:bg-blue-50 transition-colors duration-200">
+                      <h4 className="font-medium text-blue-700">Date Difference</h4>
+                      <p className="text-sm text-gray-500">Coming soon</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow border border-blue-100 hover:bg-blue-50 transition-colors duration-200">
+                      <h4 className="font-medium text-blue-700">Unit Converter</h4>
+                      <p className="text-sm text-gray-500">Coming soon</p>
+                    </div>
+                  </div>
+                </div>
               </TabsContent>
             </Tabs>
           </div>
